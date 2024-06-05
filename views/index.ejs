@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Produtos - Renan</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+    <div class="content">
+        <h1> Lista de Produtos - Renan</h1>
+        <div class="conteudo">
+            <form action="/products" method="post">
+                <h2 class="adicionar">Adicionar Produto</h2>
+                <div class="text">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="price">Preço:</label>
+                    <input type="number" step="0.01" id="price" name="price" required>
+                    <label for="stock">Estoque:</label>
+                    <input type="number" id="stock" name="stock" required>
+                    <button type="submit">Adicionar</button>
+                </div>
+            </form>
+            <img src="https://stories.freepiklabs.com/api/vectors/chef/bro/render?color=&background=complete&hide=">
+        </div>
+        <div class="baixoGostoso">
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Preço</th>
+                    <th>Estoque</th>
+                </tr></div>
+                <div class="dentro">
+                    <% products.forEach(product=> { %>
+
+                        <tr>
+                            <td>
+                                <%= product.id %>
+                            </td>
+                            <td>
+                                <%= product.name %>
+                            </td>
+                            <td>
+                                <%= product.price %>
+                            </td>
+                            <td>
+                                <%= product.stock %>
+                            </td>
+                        </tr>
+                        <% }); %>
+                </div>
+            </table>
+        
+
+
+</body>
+
+</html>
